@@ -7,9 +7,8 @@
 	
 	<script src="jquery/jquery-3.1.1.min.js"></script>
 	
-	<script>
+	<script type="text/javascript">
 	
-	$("document").ready(function() {
 	
 	/*Jquery to show/hide divs. This will allow many examples to fit on one page.
 	This will only run inside nav and for anchor elements with an id that starts with Anchor*/
@@ -45,17 +44,7 @@
             $("h2:not(.selectors)").css("border", "3px solid red");
         });
 		
-		(function ($) {
-	  $.each(['show', 'hide'], function (i, ev) {
-	    var el = $.fn[ev];
-	    $.fn[ev] = function () {
-	      this.trigger(ev);
-	      return el.apply(this, arguments);
-	    };
-	  });
-	})(jQuery);
-	
-	</script>
+</script>
 </head>
 <body>
 	<header>
@@ -78,7 +67,8 @@
 	</header>
 	
 <h1> Jquery Page</h1>
-	
+	<div id="fileNames" class="JQueryFTD">
+	</div>
 	<div id="content-1" class="content">
 	<h1> First Page</h1>
 	</div>
