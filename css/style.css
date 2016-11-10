@@ -1,11 +1,9 @@
-/*
-** Styles used in the jQuery Essential Training course materials
-*/
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 12pt;
     margin: 0;
     line-height: 1.2em;
+	background: #E9E9E9;
 }
 
 body > h1 {
@@ -19,10 +17,12 @@ body > h1 {
     padding-top:25pt;
     padding-bottom: 15pt;
     box-shadow: 0px 5px 5px 0px rgba(171,171,171,1);
+	
 }
 
-#content {
+.content {
     margin: 10pt;
+	display:none;
 }
 
 #example {
@@ -76,7 +76,7 @@ code {
 }
 
 li {
-    line-height: 1.3em;
+    line-height: 1.9em;
 }
 
 button {
@@ -93,4 +93,71 @@ button {
 .lineitem {
     width: 120px;
     display: inline-block
+}
+
+nav {
+	background: #A3A3A3;
+	padding: 12px;
+}
+
+nav a {
+  background-color: ForestGreen;  
+  border-radius: 2px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+}
+
+nav ul {
+	padding: 0;
+	margin: 0;
+ }
+
+nav li {
+	margin: 0 0 0 0;
+	display: inline;
+	position: relative;
+}
+
+nav .selector {
+	margin-right: 4px;
+}
+
+nav ul ul {
+	width: 40px;
+	padding: 5px;
+	position: absolute;
+	display: none;
+	left: 0;
+	top: 100%;
+	background: clear;
+}
+
+nav .sub
+{
+	border: solid;
+	border-color: white;
+	
+}
+nav li:hover ul {
+	display: block;
+}
+
+
+
+nav a:hover {
+    text-decoration: none;
+    color: blue;
+    background-color: white;
+}
+
+nav a:active {
+    background-color: white;
+	border: solid;
+	border-color: red;
+}
+
+.select {
+	background-color: white;
+	color: black;
 }
