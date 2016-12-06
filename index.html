@@ -21,12 +21,18 @@
 			<li class="home"><a id ="Anchor-1" class="select" href="#">Home</a></li>
 			<li class="selector"><a id ="SelectMenu" href="#">Select/Filter</a>
 				<ul>
-				<li><a id ="Anchor-2-1" class="sub" href="#">Basic</a></li>
-				<li><a id ="Anchor-2-2" class="sub" href="#">Test2</a></li>
-				<li><a id ="Anchor-2-3" class="sub" href="#">Test3</a></li>
+					<li><a id ="Anchor-2-1" class="sub" href="#">Basic</a></li>
+					<li><a id ="Anchor-2-2" class="sub" href="#">Test2</a></li>
+					<li><a id ="Anchor-2-3" class="sub" href="#">Test3</a></li>
 				</ul>
 			</li>
-			<li class="change"><a id="Anchor-3" href="#">HTML/Text</a></li>
+			<li class="change"><a id="HTMLMenu" href="#">HTML/Text</a>
+				<ul>
+					<li><a id ="Anchor-3-1" class="sub" href="#">Basic</a></li>
+					<li><a id ="Anchor-3-2" class="sub" href="#">Test2</a></li>
+					<li><a id ="Anchor-3-3" class="sub" href="#">Test3</a></li>
+				</ul>
+			</li>
 			<li class="animation"><a id="Anchor-4" href="#">Animation</a></li>
 			<li class="events"><a id="Anchor-5" href="#">Events</a></li>
 			<li class="ajax"><a id="Anchor-6" href="#">AJAX</a></li>
@@ -41,7 +47,7 @@
 	</div>
 	
 	<div id="content-2-1" class="content">
-		<span>The buttons below will run various codes.</span>
+		<span>The buttons below will reset each other first becuase most of the buttons will overlap</span>
 		<ul class="choices">
 			<li><a id="sel-1" href="#">No Borders</a></li>
 			<li><a id="sel-2" href="#">All Paragraphs</a></li>
@@ -51,7 +57,7 @@
 			<li><a id="sel-6" href="#">Heading Which Isn't Selector Class</a></li>
 		</ul>
 		
-		<h1 id="intro" class="border-selector">Introduction to jQuery Selectors and Filters</h1>
+		<h1 id="intro-2-1" class="border-selector">Introduction to jQuery Selectors and Filters</h1>
 		<p class="border-selector">Selectors and Filters provide a way of finding and extracting information from Web pages.</p>
 		
 		<h2 id="selector" class="border-selector">Selectors</h2>
@@ -63,5 +69,28 @@
 		<p class="border-selector">Filters are used to further refine the results returned from selectors.</p>
 		<p class="border-selector">For example, <code>$("p:first")</code> will select the first paragraph in the returned set from <code>$("p")</code>.</p>
 	</div>
+	<div id="content-3-1" class="content">
+	
+		<h1 id="intro-3-1">Using jQuery to Create/Change Content</h1>
+		<span> These buttons will only affect each other if they are in the same element ID</span>
+		<ul class="choices">
+			<li><a id="cre-1" href="#">No added text</a></li>
+			<li><a id="cre-2" href="#">Hello There</a></li>
+			<li><a id="cre-3" href="#">Creation Prepend</a></li>
+			<li><a id="cre-4" href="#">Heading via HTML</a></li>
+			<li><a id="cre-5" href="#">Heading via Text</a></li>
+		</ul>
+        <p>jQuery makes it very easy to create new page content and change existing page content.</p>
+        <h2 id="creation">Content Creation</h2>
+        <p>Creating new content is as simple as passing a string of HTML to the $() function.</p>
+        <p>For example, <code>$("&lt;p&gt;")</code> creates a new, empty paragraph tag. To add new content to the paragraph,
+            you could simply write <code>$("&lt;p&gt;").append("&lt;em&gt;Hello there&lt;/em&gt;")</code>.</p>
+        <h2 id="changing">Changing Content</h2>
+        <p>There are multiple ways to change page content using jQuery, depending on your needs.</p>
+        <p>The <code>html()</code> and <code>text()</code> functions can be used to directly manipulate the contents of elements,
+            and there are ways to control how content can be inserted and moved around in the page.</p>
+		<span id="example"></span>
+    </div>
+	
 </body>
 </html>

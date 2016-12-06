@@ -3,13 +3,13 @@ $(document).ready(function() {
 	/*Jquery to show/hide divs. This will allow many examples to fit on one page.
 	This will only run inside nav and for anchor elements with an id that starts with Anchor*/
 			
-	var divID="";
-	var change = "";
+	var divID ="";
+	var change ="";
 	
 	//Jquery to show when page has loaded
 	$("#content-1").append("<p>The page has just loaded. </br> This the home page. </p>");
 				
-	$("nav").on("click", function () {
+	$("nav").on("click", function (event) {
 		var anchorID = event.target.id;
 		var checks ="";
 					
@@ -32,11 +32,10 @@ $(document).ready(function() {
 	//Jquery to activate on the hide event
 	$("#content-2-1").on("hide", function () {
 		change = $(".border-selector").css("border", "none");
-		console.log("1");
 	});
 		//Jquery for content div ID 2-1
 				
-	$(".choices").on("click", function() {
+	$(".choices").on("click", function(event) {
 			
 		var target = event.target.id;
 		switch(target) {
@@ -53,7 +52,7 @@ $(document).ready(function() {
 				break;
 			case "sel-4":
 				change = $(".border-selector").css("border", "none");
-				change = $("#intro").css("border", "3px solid red");
+				change = $("#intro-2-1").css("border", "3px solid red");
 				break;
 			case "sel-5":
 				change = $(".border-selector").css("border", "none");
@@ -61,13 +60,39 @@ $(document).ready(function() {
 				break;
 			case "sel-6":
 				change = $(".border-selector").css("border", "none");
-				change = $("h2:not(#selector)").css("border", "3px solid red");
+				change = $("#content-2-1 h2:not(#selector)").css("border", "3px solid red");
+				break;
+			case "cre-1":
+				$("#example").html("");
+				$("#creation").html("Content Creation");
+				break;
+			case "cre-2":
+				var newP = $("<p>");
+				newP.append("<em>Hello There</em>");
+				$("#example").html(newP);
+				break;
+			case "cre-3":
+				$("#creation").prepend("Watch This! ");
+				break;
+			case "cre-4":
+				$("#example").html("<h2>This is a new H2</h2>");
+				break;
+			case "cre-5":
+				$("#example").text("<h2>This is a new H2</h2>");
 				break;
 			default:
-				change = $(".border-selector").css("border", "none");
+				if(event.target.nodeName == "UL") {
+					break;
+				}
+				else {
+					alert("Warning not built yet");
+					break;
+				}
+				
 					
 		}
 	});
+	
 });
 
 (function ($) 
