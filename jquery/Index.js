@@ -46,18 +46,19 @@ $(document).ready(function() {
 			fontSize: "",
 			borderWidth: ""
 		});
-	// content-5-1 does not require a hide function, it resets automatically without this
 	});
+	// content-5-1 does not require a hide function, it resets automatically without this
+	$("#content-6-1").on("hide", function () {
+		$("example-6-1").html("");
+	});
+	
 	// Jquery that activates on when this div is shown
 	$("#content-5-1").on("show", function () {
 		$("#example-5-1").on("mousemove", onMouseOver);
         $("#example-5-1").on("click", onMouseClick);
         $("#example-5-1").on("mouseleave", onMouseLeave);
 	});
-	$("#content-6-1").on("show", function () {
-		$("#getcontent").click(getContent);
-        $("#loadhtml").click(loadHTML);
-	});
+	
 // jquery switch that changes the div when the corresponding element is clicked				
 	$(".choices").on("click", function(event) {
 			
@@ -122,7 +123,7 @@ $(document).ready(function() {
 				.animate({top: "+=100", borderWidth: 10}, "slow")
 				break;
 			case "ajx-1":
-				getContent();
+				$("example-6-1").html("");
 				break;
 			case "ajx-2":
 				getContent();
@@ -138,9 +139,7 @@ $(document).ready(function() {
 				else {
 					alert("Warning not built yet. Wait for the next update");
 					break;
-				}
-				
-					
+				}		
 		}
 	});
 	
