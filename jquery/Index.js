@@ -122,13 +122,13 @@ $(document).ready(function() {
 				.animate({top: "+=100", borderWidth: 10}, "slow")
 				break;
 			case "ajx-1":
-				$("#ajx-1").click(getContent);
+				getContent();
 				break;
 			case "ajx-2":
-				$("#ajx-1").click(getContent)
+				getContent();
 				break;
 			case "ajx-3":
-				$("#ajx-3").click(loadHTML);
+				loadHTML();
 				break;
 				
 			default:
