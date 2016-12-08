@@ -54,6 +54,10 @@ $(document).ready(function() {
         $("#example-5-1").on("click", onMouseClick);
         $("#example-5-1").on("mouseleave", onMouseLeave);
 	});
+	$("#content-6-1").on("show", function () {
+		$("#getcontent").click(getContent);
+        $("#loadhtml").click(loadHTML);
+	});
 // jquery switch that changes the div when the corresponding element is clicked				
 	$(".choices").on("click", function(event) {
 			
@@ -159,3 +163,18 @@ function onMouseLeave(evt) {
             $("#example-5-1").text("mouseleave");
 			$("#example-5-1").on("mousemove", onMouseOver);
 }
+// functions to grab data from other files via AJAX
+function getContent() {
+            $.ajax("Included_Files/sampletextcontent.txt", 
+                   { success: setContent, 
+                     type: "GET", 
+                     dataType: "text" });
+        }
+        
+        function setContent(data, status, jqxhr) {
+            $("#example-6-1").text(data);
+        }
+        
+        function loadHTML() {
+            $("#example-6-1").load("Included_Files/samplehtml.html");
+        }
