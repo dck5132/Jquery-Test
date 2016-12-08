@@ -1,18 +1,17 @@
 $(document).ready(function() {
-			
-	/*Jquery to show/hide divs. This will allow many examples to fit on one page.
-	This will only run inside nav and for anchor elements with an id that starts with Anchor*/
-			
+	//global vars
 	var divID ="";
 	var change ="";
 	
 	//Jquery to show when page has loaded
 	$("#content-1").append("<p>The page has just loaded. </br> This the home page. </p>");
-				
+	$("#content-1").show();
+	
+	// navigation jquery function
 	$("nav").on("click", function (event) {
 		var anchorID = event.target.id;
-		var checks ="";
-					
+		var showing ="";
+		var hiding = "";			
 					
 		if (anchorID.match("^Anchor")) {
 					
@@ -20,24 +19,41 @@ $(document).ready(function() {
 			$(event.target).addClass('select');
 						
 			divID = anchorID.replace("Anchor", "");
-							
-			checks = "content" + divID;
-						
-			$('div:not(#' +checks+')').hide();
-			$("#content" + divID).show();
-		}
 				
+			showing = "#content" + divID;
+			hiding = $("div[class='content']");
+			
+			$(hiding).hide();
+			$(showing).show();
+		}
+
 	});
 	
-	//Jquery to activate on the hide event
+//Jquery to activate on the hide event, this is used to reset the divs as they are hidden
 	$("#content-2-1").on("hide", function () {
 		change = $(".border-selector").css("border", "none");
 	});
-		//Jquery for content div ID 2-1
-				
+	$("#content-3-1").on("hide", function () {
+		$("#example").html("");
+		$("#creation").html("Content Creation");
+	});
+	$("#content-4-1").on("hide", function () {
+		$("#testDiv").animate({top: "0"})
+		.animate({left: 0})
+		$("#testDiv").css({
+			width: "",
+			height: "",
+			fontSize: "",
+			borderWidth: ""
+		});
+		
+	});
+	
+// jquery switch that changes the div when the corresponding element is clicked				
 	$(".choices").on("click", function(event) {
 			
 		var target = event.target.id;
+		
 		switch(target) {
 			case "sel-1":
 				change = $(".border-selector").css("border", "none");
@@ -80,12 +96,29 @@ $(document).ready(function() {
 			case "cre-5":
 				$("#example").text("<h2>This is a new H2</h2>");
 				break;
+			case "ani-1":
+				$("#testDiv").animate({top: "0"}, "slow")
+				.animate({left: 0}, "500")
+				$("#testDiv").css({
+					width: "",
+					height: "",
+					fontSize: "",
+					borderWidth: ""
+				});
+				break;
+			case "ani-2":
+				$("#testDiv").animate({width: 400}, 300)
+				.animate({height: 300}, 400)
+				.animate({left: 200}, 500)
+				.animate({top: "+=100", borderWidth: 10}, "slow")
+				break;
+				
 			default:
 				if(event.target.nodeName == "UL") {
 					break;
 				}
 				else {
-					alert("Warning not built yet");
+					alert("Warning not built yet. Wait for the next update");
 					break;
 				}
 				
@@ -95,6 +128,7 @@ $(document).ready(function() {
 	
 });
 
+// Custom jquery function that hides/shows divs
 (function ($) 
 {
     $.each(['show', 'hide'], function (i, ev) 

@@ -33,7 +33,13 @@
 					<li><a id ="Anchor-3-3" class="sub" href="#">Test3</a></li>
 				</ul>
 			</li>
-			<li class="animation"><a id="Anchor-4" href="#">Animation</a></li>
+			<li class="animation"><a id="AnimationMenu" href="#">Animation</a>
+				<ul>
+					<li><a id ="Anchor-4-1" class="sub" href="#">Basic</a></li>
+					<li><a id ="Anchor-4-2" class="sub" href="#">Test2</a></li>
+					<li><a id ="Anchor-4-3" class="sub" href="#">Test3</a></li>
+				</ul>
+			</li>
 			<li class="events"><a id="Anchor-5" href="#">Events</a></li>
 			<li class="ajax"><a id="Anchor-6" href="#">AJAX</a></li>
 			</ul>
@@ -42,7 +48,7 @@
 	
 <h1> Jquery Page</h1>
 	
-	<div id="content-1">
+	<div id="content-1" class ="content">
 	<h1> First Page</h1>
 	</div>
 	
@@ -89,8 +95,18 @@
         <p>There are multiple ways to change page content using jQuery, depending on your needs.</p>
         <p>The <code>html()</code> and <code>text()</code> functions can be used to directly manipulate the contents of elements,
             and there are ways to control how content can be inserted and moved around in the page.</p>
-		<span id="example"></span>
+		<div id="example"></div>
     </div>
-	
+    <div id="content-4-1" class="content">
+		<h1 id="intro-4-1">Quick jQuery Animation Intro</h1>
+		<span>Simple Animation Choices</span>
+		<ul class="choices">
+			<li><a id="ani-1" href="#">Undo Animation</a></li>
+			<li><a id="ani-2" href="#">Start Animation</a></li>
+		</ul>
+        <p>jQuery provides some basic animation features for showing and hiding elements, as well as a low-level animation function
+            that can be used to animate several CSS properties (as long as they are numeric).</p>
+        <div id="testDiv"></div>
+    </div>
 </body>
 </html>
