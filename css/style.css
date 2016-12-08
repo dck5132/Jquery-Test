@@ -93,7 +93,7 @@ button {
     cursor: pointer;
 }
 
-#example {
+.example {
     border: 1px solid gray;
     background-color: #b3c8d0;
     font-size:14pt;

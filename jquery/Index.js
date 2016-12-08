@@ -34,7 +34,7 @@ $(document).ready(function() {
 		change = $(".border-selector").css("border", "none");
 	});
 	$("#content-3-1").on("hide", function () {
-		$("#example").html("");
+		$("#example-3-1").html("");
 		$("#creation").html("Content Creation");
 	});
 	$("#content-4-1").on("hide", function () {
@@ -46,9 +46,14 @@ $(document).ready(function() {
 			fontSize: "",
 			borderWidth: ""
 		});
-		
+	// content-5-1 does not require a hide function, it resets automatically without this
 	});
-	
+	// Jquery that activates on when this div is shown
+	$("#content-5-1").on("show", function () {
+		$("#example-5-1").on("mousemove", onMouseOver);
+        $("#example-5-1").on("click", onMouseClick);
+        $("#example-5-1").on("mouseleave", onMouseLeave);
+	});
 // jquery switch that changes the div when the corresponding element is clicked				
 	$(".choices").on("click", function(event) {
 			
@@ -91,10 +96,10 @@ $(document).ready(function() {
 				$("#creation").prepend("Watch This! ");
 				break;
 			case "cre-4":
-				$("#example").html("<h2>This is a new H2</h2>");
+				$("#example-3-1").html("<h2>This is a new H2</h2>");
 				break;
 			case "cre-5":
-				$("#example").text("<h2>This is a new H2</h2>");
+				$("#example-3-1").text("<h2>This is a new H2</h2>");
 				break;
 			case "ani-1":
 				$("#testDiv").animate({top: "0"}, "slow")
@@ -128,7 +133,7 @@ $(document).ready(function() {
 	
 });
 
-// Custom jquery function that hides/shows divs
+//Jquery function that hides/shows divs
 (function ($) 
 {
     $.each(['show', 'hide'], function (i, ev) 
@@ -141,3 +146,16 @@ $(document).ready(function() {
         };
     });
 })(jQuery);
+// functions to define events that occur when the mouse meets their criteria
+function onMouseOver(evt) {
+            $("#example-5-1").text(evt.type + ": " + evt.pageX + ", " + evt.pageY + "\n" +
+                              "Button: " + evt.which + " Key: " + evt.metaKey);
+}
+function onMouseClick(evt) {
+            $("#example-5-1").text(evt.type + ": " + evt.pageX + ", " + evt.pageY);
+            $("#example-5-1").off("mousemove", onMouseOver);
+}
+function onMouseLeave(evt) {
+            $("#example-5-1").text("mouseleave");
+			$("#example-5-1").on("mousemove", onMouseOver);
+}
