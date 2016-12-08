@@ -121,6 +121,15 @@ $(document).ready(function() {
 				.animate({left: 200}, 500)
 				.animate({top: "+=100", borderWidth: 10}, "slow")
 				break;
+			case "ajx-1":
+				$("#ajx-1").click(getContent);
+				break;
+			case "ajx-2":
+				$("#ajx-1").click(getContent)
+				break;
+			case "ajx-3":
+				$("#ajx-3").click(loadHTML);
+				break;
 				
 			default:
 				if(event.target.nodeName == "UL") {
