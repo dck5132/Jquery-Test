@@ -49,7 +49,7 @@ $(document).ready(function() {
 	});
 	// content-5-1 does not require a hide function, it resets automatically without this
 	$("#content-6-1").on("hide", function () {
-		$("example-6-1").empty();
+		$("#example-6-1").empty();
 	});
 	
 	// Jquery that activates on when this div is shown
@@ -123,7 +123,7 @@ $(document).ready(function() {
 				.animate({top: "+=100", borderWidth: 10}, "slow")
 				break;
 			case "ajx-1":
-				$("example-6-1").empty();
+				$("#example-6-1").empty();
 				break;
 			case "ajx-2":
 				getContent();
