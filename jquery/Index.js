@@ -1,3 +1,5 @@
+/*global $*/
+
 $(document).ready(function() {
 	//global vars
 	var divID ="";
@@ -39,7 +41,7 @@ $(document).ready(function() {
 	});
 	$("#content-4-1").on("hide", function () {
 		$("#testDiv").animate({top: "0"})
-		.animate({left: 0})
+		.animate({left: 0});
 		$("#testDiv").css({
 			width: "",
 			height: "",
@@ -70,7 +72,7 @@ $(document).ready(function() {
 				break;
 			case "sel-2":
 				change = $(".border-selector").css("border", "none");
-				change = $("#content-2-1 p").css("border", "3px solid red");;
+				change = $("#content-2-1 p").css("border", "3px solid red");
 				break;
 			case "sel-3":
 				change = $(".border-selector").css("border", "none");
@@ -89,13 +91,13 @@ $(document).ready(function() {
 				change = $("#content-2-1 h2:not(#selector)").css("border", "3px solid red");
 				break;
 			case "cre-1":
-				$("#example").html("");
+				$("#example-3-1").html("");
 				$("#creation").html("Content Creation");
 				break;
 			case "cre-2":
 				var newP = $("<p>");
 				newP.append("<em>Hello There</em>");
-				$("#example").html(newP);
+				$("#example-3-1").html(newP);
 				break;
 			case "cre-3":
 				$("#creation").prepend("Watch This! ");
@@ -107,20 +109,18 @@ $(document).ready(function() {
 				$("#example-3-1").text("<h2>This is a new H2</h2>");
 				break;
 			case "ani-1":
-				$("#testDiv").animate({top: "0"}, "slow")
-				.animate({left: 0}, "500")
+				$("#testDiv").animate({top: "0", borderWidth: "1"}, "slow")
+				.animate({left: 0}, "500");
 				$("#testDiv").css({
 					width: "",
-					height: "",
-					fontSize: "",
-					borderWidth: ""
+					height: ""
 				});
 				break;
 			case "ani-2":
 				$("#testDiv").animate({width: 400}, 300)
 				.animate({height: 300}, 400)
 				.animate({left: 200}, 500)
-				.animate({top: "+=100", borderWidth: 10}, "slow")
+				.animate({top: "+=100", borderWidth: 10}, "slow");
 				break;
 			case "ajx-1":
 				$("#example-6-1").empty();
