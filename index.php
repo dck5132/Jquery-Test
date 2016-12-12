@@ -7,7 +7,12 @@
 	
 	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
 		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-		crossorigin="anonymous"></script>
+		crossorigin="anonymous">
+	</script>
+	<script src="https://code.jquery.com/jquery-migrate-3.0.0.js"
+		integrity="sha256-lsVOB+3Yhm6He5MkTO3Bw/Xw4NXK7wYYTi1Y+M/2PrM="
+		crossorigin="anonymous">
+	</script>
   
 	<script src="jquery/Index.js"></script>
 </head>
