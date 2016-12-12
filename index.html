@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jquery Page 1</title>
+	
+	<link rel="stylesheet" href="css/style.css"/>
+	
+	<script src="jquery/jquery-3.1.1.min.js"></script>
+	<script src="jquery/Index.js"></script>
+	<script>
+	
+				
+				
+				
+		</script>
+</head>
+<body>
+	<header>
+		<nav id="outside">
+		<H1>23!!</H1>
+			<ul class = "nav">
+				<li class="home"><a id ="Anchor-1" class="select" href="#">Home</a></li>
+				<li class="selector"><a id ="SelectMenu" href="#">Select/Filter</a>
+					<ul>
+						<li><a id ="Anchor-2-1" class="sub" href="#">Basic</a></li>
+						<li><a id ="Anchor-2-2" class="sub" href="#">Test2</a></li>
+						<li><a id ="Anchor-2-3" class="sub" href="#">Test3</a></li>
+					</ul>
+				</li>
+				<li class="change"><a id="HTMLMenu" href="#">HTML/Text</a>
+					<ul>
+						<li><a id ="Anchor-3-1" class="sub" href="#">Basic</a></li>
+						<li><a id ="Anchor-3-2" class="sub" href="#">Test2</a></li>
+						<li><a id ="Anchor-3-3" class="sub" href="#">Test3</a></li>
+					</ul>
+				</li>
+				<li class="animation"><a id="AnimationMenu" href="#">Animation</a>
+					<ul>
+						<li><a id ="Anchor-4-1" class="sub" href="#">Basic</a></li>
+						<li><a id ="Anchor-4-2" class="sub" href="#">Test2</a></li>
+						<li><a id ="Anchor-4-3" class="sub" href="#">Test3</a></li>
+					</ul>
+				</li>
+				<li class="events"><a id="EventsMenu" href="#">Events</a>
+					<ul>
+						<li><a id ="Anchor-5-1" class="sub" href="#">Basic</a></li>
+						<li><a id ="Anchor-5-2" class="sub" href="#">Test2</a></li>
+						<li><a id ="Anchor-5-3" class="sub" href="#">Test3</a></li>
+					</ul>
+				</li>
+				<li class="ajax"><a id="AJAXMenu" href="#">AJAX</a>
+					<ul>
+						<li><a id ="Anchor-6-1" class="sub" href="#">Basic</a></li>
+						<li><a id ="Anchor-6-2" class="sub" href="#">Test2</a></li>
+						<li><a id ="Anchor-6-3" class="sub" href="#">Test3</a></li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	
+<h1> Jquery Page</h1>
+	
+	<div id="content-1" class ="content">
+	<h1> First Page</h1>
+	</div>
+	
+	<div id="content-2-1" class="content">
+		<span>The buttons below will reset each other first becuase most of the buttons will overlap</span>
+		<ul class="choices">
+			<li><a id="sel-1" href="#">No Borders</a></li>
+			<li><a id="sel-2" href="#">All Paragraphs</a></li>
+			<li><a id="sel-3" href="#">Selector ID</a></li>
+			<li><a id="sel-4" href="#">Intro ID</a></li>
+			<li><a id="sel-5" href="#">First Paragraph</a></li>
+			<li><a id="sel-6" href="#">Heading Which Isn't Selector Class</a></li>
+		</ul>
+		
+		<h1 id="intro-2-1" class="border-selector">Introduction to jQuery Selectors and Filters</h1>
+		<p class="border-selector">Selectors and Filters provide a way of finding and extracting information from Web pages.</p>
+		
+		<h2 id="selector" class="border-selector">Selectors</h2>
+		<p class="border-selector">Selectors are used to select parts of the Web page using a common CSS-style syntax.</p>
+		<p class="border-selector">For example, <code>$("p")</code> will select all of the paragraph tags in a document and return them as a list that
+			can be further operated upon.</p>
+				
+		<h2 class="border-selector">Filters</h2>
+		<p class="border-selector">Filters are used to further refine the results returned from selectors.</p>
+		<p class="border-selector">For example, <code>$("p:first")</code> will select the first paragraph in the returned set from <code>$("p")</code>.</p>
+	</div>
+	<div id="content-3-1" class="content">
+	
+		<h1 id="intro-3-1">Using jQuery to Create/Change Content</h1>
+		<span> These buttons will only affect each other if they are in the same element ID</span>
+		<ul class="choices">
+			<li><a id="cre-1" href="#">No added text</a></li>
+			<li><a id="cre-2" href="#">Hello There</a></li>
+			<li><a id="cre-3" href="#">Creation Prepend</a></li>
+			<li><a id="cre-4" href="#">Heading via HTML</a></li>
+			<li><a id="cre-5" href="#">Heading via Text</a></li>
+		</ul>
+        <p>jQuery makes it very easy to create new page content and change existing page content.</p>
+        <h2 id="creation">Content Creation</h2>
+        <p>Creating new content is as simple as passing a string of HTML to the $() function.</p>
+        <p>For example, <code>$("&lt;p&gt;")</code> creates a new, empty paragraph tag. To add new content to the paragraph,
+            you could simply write <code>$("&lt;p&gt;").append("&lt;em&gt;Hello there&lt;/em&gt;")</code>.</p>
+        <h2 id="changing">Changing Content</h2>
+        <p>There are multiple ways to change page content using jQuery, depending on your needs.</p>
+        <p>The <code>html()</code> and <code>text()</code> functions can be used to directly manipulate the contents of elements,
+            and there are ways to control how content can be inserted and moved around in the page.</p>
+		<div id="example-3-1" class = "example"></div>
+    </div>
+    <div id="content-4-1" class="content">
+		<h1 id="intro-4-1">Quick jQuery Animation Intro</h1>
+		<span>Simple Animation Choices</span>
+		<ul class="choices">
+			<li><a id="ani-1" href="#">Undo Animation</a></li>
+			<li><a id="ani-2" href="#">Start Animation</a></li>
+		</ul>
+        <p>jQuery provides some basic animation features for showing and hiding elements, as well as a low-level animation function
+            that can be used to animate several CSS properties (as long as they are numeric).</p>
+        <div id="testDiv"></div>
+    </div>
+	
+    <div id="content-5-1" class="content">
+		<h1>jQuery Event Handling</h1>
+        <p>jQuery normalizes an event structure across browsers and provides cross-browser consistency for properties such as
+            the event name, the page coordinates of the mouse, the element where the event originated along with any other
+            element related to the event, and information such as whether a meta-key or specific mouse button was pressed.</p>
+        <div id="example-5-1" class = "example">
+        </div>
+    </div>
+    <div id="content-6-1" class="content">
+		<h1>AJAX and jQuery</h1>
+		<span>Simple AJAX Choices</span>
+		<ul class="choices">
+			<li><a id="ajx-1" href="#">Remove Retreived Data</a></li>
+			<li><a id="ajx-2" href="#">AJAX pull from text file</a></li>
+			<li><a id="ajx-3" href="#">AJAX pull from HTML file</a></li>
+		</ul>
+        <p>One of jQuery's great strengths is how it simplifies working with AJAX. jQuery provides high-level wrapper functions
+            for retrieving data, working with different data types, handling errors, and monitoring the AJAX request process.</p>
+        <ul>
+            <li><code>ajax()</code>: used to perform generic AJAX requests</li>
+            <li><code>load()</code>: loads AJAX content directly into a page element</li>
+        </ul>
+        <div id="example-6-1" class="example">
+        </div>
+    </div>
+</body>
+</html>
