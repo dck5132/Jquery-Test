@@ -5,19 +5,15 @@
 	
 	<link rel="stylesheet" href="css/style.css"/>
 	
-	<script src="jquery/jquery-3.1.1.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+		integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+		crossorigin="anonymous"></script>
+  
 	<script src="jquery/Index.js"></script>
-	<script>
-	
-				
-				
-				
-		</script>
 </head>
 <body>
 	<header>
 		<nav id="outside">
-		<H1>23!!</H1>
 			<ul class = "nav">
 				<li class="home"><a id ="Anchor-1" class="select" href="#">Home</a></li>
 				<li class="selector"><a id ="SelectMenu" href="#">Select/Filter</a>
